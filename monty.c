@@ -1,4 +1,5 @@
 #include "monty.h"
+var_t var = {NULL, NULL, NULL, 0};
 /**
  * main - main function
  * @argc: argument count
