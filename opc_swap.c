@@ -8,7 +8,7 @@
 
 void swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp
+	stack_t *temp;
 	unsigned int l = 0, x = 0;
 
 	temp = *stack;
@@ -23,7 +23,7 @@ void swap(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		fclose(var.f);
 		free(var.buff);
-		free_stack(stack, line_number);
+		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;

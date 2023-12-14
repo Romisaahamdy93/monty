@@ -40,7 +40,7 @@ typedef struct instruction_s
 typedef struct var_s
 {
 	char *arg;
-	File *f;
+	FILE *f;
 	char *buff;
 	int lifi;
 } var_t;

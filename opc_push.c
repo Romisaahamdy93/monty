@@ -38,5 +38,5 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	a = atoi(var.arg);
 	if (var.lifi == 0)
-		addnode(stack, a);
+		add_node(stack, a);
 }
