@@ -25,6 +25,22 @@ typedef struct stack_s
 } stack_t;
 
 /**
+ * struct var_s - variables -args, file, line buff
+ * @arg: arguments
+ * @f: file
+ * @buff: line buff
+ * @lifi: head to queue
+ */
+typedef struct var_s
+{
+        char *arg;
+        FILE *f;
+        char *buff;
+        int lifi;
+} var_t;
+extern var_t var;
+
+/**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
@@ -38,14 +54,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-typedef struct var_s
-{
-	char *arg;
-	FILE *f;
-	char *buff;
-	int lifi;
-} var_t;
-extern var_t var;
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
