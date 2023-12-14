@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 FILE *f;
-char buff;
+char *buff;
 size_t l = 0;
 ssize_t re_line = 1;
 unsigned int line_number = 0;
@@ -30,7 +30,7 @@ while (re_line > 0)
 buff = NULL;
 re_line = getline(&buff, &l, f);
 var.buff = buff;
-buff++;
+line_number++;
 if (re_line > 0)
 {
 execute(buff, &stack, line_number, f);
