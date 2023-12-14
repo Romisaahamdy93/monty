@@ -64,5 +64,8 @@ void nop(stack_t **stack, unsigned int line_number);
 int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *f);
 void free_stack(stack_t *stack);
 void add_node(stack_t **stack, int a);
-
+void sub(stack_t  **stack, unsigned int line_number);
+void divide(stack_t  **stack, unsigned int line_number);
+void mod(stack_t  **stack, unsigned int line_number);
+void mul(stack_t  **stack, unsigned int line_number);
 #endif

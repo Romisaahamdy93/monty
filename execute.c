@@ -19,6 +19,10 @@ int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *f)
 		{ "swap", swap },
 		{ "add", add },
 		{ "nop", nop },
+		{ "sub", sub },
+		{ "div", divide },
+		{ "mul", mul },
+		{ "mod", mod },
 		{ NULL, NULL}
 	};
 
