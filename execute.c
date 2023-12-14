@@ -42,8 +42,7 @@ int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *f)
 		if (strcmp(op, opc[i].opcode) == 0)
 		{
 			opc[i].f(stack, line_number);
-			return (0);
-		}
+			return (0); }
 		i++;
 	}
 	if (op && opc[i].opcode == NULL)
@@ -51,7 +50,5 @@ int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *f)
 		fclose(f);
 		free(buff);
 		free_stack(*stack);
-		exit(EXIT_FAILURE);
-	}
-	return (1);
-}
+		exit(EXIT_FAILURE); }
+	return (1); }
