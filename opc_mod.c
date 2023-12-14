@@ -16,7 +16,7 @@ l++;
 }
 if (l < 2)
 {
-fprintf(stderr, "L%d: can't mod, stack too short\n", ine_number);
+fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
 fclose(var.f);
 free(var.buff);
 free_stack(*stack);
