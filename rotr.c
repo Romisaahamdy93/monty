@@ -6,21 +6,20 @@
  */
 void rotr(stack_t **stack, unsigned int line_number)
 {
-(void) line_number;
 stack_t *temp;
 temp = *stack;
+(void) line_number;
 if (*stack == NULL || (*stack)->next == NULL)
 {
 return;
 }
-x = (*stack)->next;
-x->prev = NULL;
 while (temp->next != NULL)
 {
 temp = temp->next;
 }
 temp->next = *stack;
-(*stack)->next = NULL;
+temp->prev->next = NULL;
+temp->prev = NULL;
 (*stack)->prev = temp;
-(*stack) = x;
+(*stack) = temp;
 }
