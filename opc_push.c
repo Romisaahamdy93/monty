@@ -19,6 +19,7 @@ void push(stack_t **stack, unsigned int line_number)
 			if (var.arg[b] > 57 || var.arg[b] < 48)
 				new = 1;
 		}
+
 		if (new == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
