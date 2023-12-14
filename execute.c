@@ -23,6 +23,10 @@ int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *f)
 		{ "div", divide },
 		{ "mul", mul },
 		{ "mod", mod },
+		{ "pchar", pchar },
+		{ "pstr", pstr },
+		{ "rotl", rotl },
+		{ "rotr", rotr },
 		{ NULL, NULL}
 	};
 
